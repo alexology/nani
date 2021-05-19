@@ -1,0 +1,22 @@
+Package: nani
+Type: Package
+Title: Calculates net anthropogenic input index and soil system budget for nitrogen and phosphorus
+Version: 0.1.0
+Author: Alex Laini, Daniele Nizzoli
+Maintainer: Alex Laini <alex.laini@gmail.com>
+Description: TBD.
+License: GPL (>= 2)
+Encoding: UTF-8
+Depends: R (>= 4.00)
+Imports: dplyr,
+  tidyr,
+  tibble,
+  plotly,
+  RColorBrewer,
+  sf
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat (>= 3.0.0),
+    covr
+Config/testthat/edition: 3
