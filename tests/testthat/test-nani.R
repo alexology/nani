@@ -288,7 +288,7 @@ test_that("nani", {
   
   
   
-  ### nani perc =======================================
+  ### ssb perc =======================================
   load(system.file("testdata", "ssb_perc_test.rda", package="nani"))
   ssb_perc_test[is.na(ssb_perc_test)] <- 0
   ssb_perc_test <- dplyr::as_tibble(ssb_perc_test)
