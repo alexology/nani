@@ -16,16 +16,15 @@ human_food <- function(crop, coef_tbl, multiplier = NULL){
 
   crop <- as_tibble(crop)
   coef_tbl <- as_tibble(coef_tbl)
-
+  
+  if(! identical(attr(crop, "type"), ("crop_production"))){
+    stop("crop production is needed")
+  }
+  
   # avoid rcmd checks
   type <- variable <- level <- coefficient <- human_food_fraction <-
     sp_unit <- numbers <- . <- fraction_loss_during_human_processing <-
     res_human_food <- NULL
-
-
-  if(attr(crop, "type") != c("crop_production")){
-    stop("crop production is needed")
-  }
 
   # prepare the coefficient table for the join
   coef_tbl <- coef_tbl %>%

@@ -22,6 +22,13 @@ net_anthropogenic_input <- function(..., element = "nitrogen"){
                       "human_food_consumption", "human_excretion", "animal_feed", "animal_feed_consumption",
                       "animal_production", "animal_excretion_gross")
   }
+  
+  if(identical(element, "phosphorus")){
+    input_needed <- c("fertilizers", "depositions", "crop_production", "human_food",
+                      "human_food_consumption", "human_excretion", "animal_feed", "animal_feed_consumption",
+                      "animal_production", "animal_excretion_gross")
+  }
+  
 
   input_user <- unlist(lapply(arguments, function(x) attr(x, "type")))
 
@@ -47,6 +54,7 @@ net_anthropogenic_input <- function(..., element = "nitrogen"){
 
   colnames(res) <- c("sp_unit", input_user)
   res <- res[, match(c("sp_unit", input_needed), colnames(res))]
+  attr(res, "type") <- NULL
   res %>%
     mutate(net_import_feed = animal_feed_consumption - animal_feed) %>%
     mutate(net_import_food = human_food_consumption - animal_production - human_food) %>%

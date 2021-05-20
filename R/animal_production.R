@@ -35,7 +35,7 @@ animal_production <- function(animal_numbers, coef_tbl, multiplier = NULL){
     pivot_longer(-sp_unit, names_to = "level", values_to = "numbers") %>%
     inner_join(coef_tbl, by = "level") %>%
     mutate(res_ap = numbers * ((element_consumption - element_excretion) * (1 - human_consumption) * butchered_fraction)) %>%
-    { if (!is.null(multiplier)) mutate(., res_afc = res_ap * multiplier) else . } %>%
+    { if (!is.null(multiplier)) mutate(., res_ap = res_ap * multiplier) else . } %>%
     select(sp_unit, level, res_ap) %>%
     pivot_wider(names_from = level, values_from = res_ap) %>%
     mutate(across(where(is.numeric), replace_na, replace = 0))

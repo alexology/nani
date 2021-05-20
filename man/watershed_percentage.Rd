@@ -4,14 +4,14 @@
 \alias{watershed_percentage}
 \title{watershed percentage}
 \usage{
-watershed_percentage(x, percentage, scale = NULL)
+watershed_percentage(x, percentage, multiplier = NULL)
 }
 \arguments{
 \item{x}{a `data.frame` or `tibble`.}
 
 \item{percentage}{a `data.frame` or `tibble` containing the percentage of each spatial unit in a watershed.}
 
-\item{scale}{scaling factor (e.g. to calculate hectars instead of km^2^).}
+\item{multiplier}{multiply by a number (e.g. to calculate hectars instead of km^2^).}
 }
 \description{
 Normalise data to watershed area in each spatial unit.

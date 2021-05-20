@@ -46,6 +46,7 @@ soil_system_budget <- function(..., element = "nitrogen"){
 
   colnames(res) <- c("sp_unit", input_user)
   res <- res[, match(c("sp_unit", input_needed), colnames(res))]
+  attr(res, "type") <- NULL
   res %>%
     mutate(ssb = nitrogen_fixation + fertilizers + depositions + animal_excretion_net - crop_production) %>%
     as_tibble()
