@@ -9,7 +9,7 @@
 #' @details TBD
 #'
 #' @export
-#' @importFrom dplyr filter as_tibble %>% pull mutate select
+#' @importFrom dplyr filter as_tibble %>% pull mutate select across
 #' @importFrom tidyr pivot_longer replace_na
 
 human_excretion <- function(human, coef_tbl, multiplier = 0.001){

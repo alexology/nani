@@ -15,7 +15,7 @@
 #' @seealso as_nani_options
 #'
 #' @export
-#' @importFrom dplyr as_tibble mutate
+#' @importFrom dplyr as_tibble mutate across
 #' @importFrom tidyr replace_na
 
 

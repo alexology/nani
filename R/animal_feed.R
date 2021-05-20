@@ -9,7 +9,7 @@
 #' @details TBD
 #'
 #' @export
-#' @importFrom dplyr as_tibble filter select %>% mutate
+#' @importFrom dplyr as_tibble filter select %>% mutate across
 #' @importFrom tidyr pivot_wider pivot_longer replace_na
 
 animal_feed <- function(crop, coef_tbl, multiplier = NULL){

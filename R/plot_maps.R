@@ -14,7 +14,7 @@
 #' @details Yield is calculated as the product between cultivated area and biomass
 #'
 #' @export
-#' @importFrom plotly plot_ly plotly_build
+#' @importFrom plotly plot_ly plotly_build layout
 #' @importFrom sf st_bbox st_transform
 #' @importFrom stats as.formula
 

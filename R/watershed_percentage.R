@@ -4,6 +4,7 @@
 #'
 #' @param x a `data.frame` or `tibble`.
 #' @param percentage a `data.frame` or `tibble` containing the percentage of each spatial unit in a watershed.
+#' @param percentage a `data.frame` or `tibble` containing the percentage of each spatial unit in a watershed.
 #' @param multiplier multiply by a number (e.g. to calculate hectars instead of km^2^).
 #' 
 #' @details Administrative boundaries often does not match with watershed boundaries. The function `watershed_percentage`

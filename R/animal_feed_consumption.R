@@ -14,7 +14,7 @@
 #' For example, nitrogen has a consumption_rate usually expressed as kg ind^-1^ year^-1^.
 #'
 #' @export
-#' @importFrom dplyr filter as_tibble %>% pull mutate select
+#' @importFrom dplyr filter as_tibble %>% pull mutate select across
 #' @importFrom tidyr pivot_wider pivot_longer replace_na
 
 animal_feed_consumption <- function(animal_numbers, coef_tbl, multiplier = NULL){
