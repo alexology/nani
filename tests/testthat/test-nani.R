@@ -157,6 +157,22 @@ test_that("nani", {
   
   
   
+  ### human non food production =======================================
+  load(system.file("testdata", "human_non_food_production_test.rda", package="nani"))
+  human_non_food_production_test[is.na(human_non_food_production_test)] <- 0
+  human_non_food_production_test <- dplyr::as_tibble(human_non_food_production_test)
+  attr(human_non_food_production_test, "type") <- c("human_non_food_production")
+  human_non_food_production_test_01 <- human_non_food_production_test
+  i <- unlist(lapply(human_non_food_production_test_01, is.numeric))
+  human_non_food_production_test_01[i] <- human_non_food_production_test_01[i] * 1000
+
+  human_non_food_production_test_res <- human_non_food_production(human_population, coef_table)
+
+  expect_equal(human_non_food_production_test_res, human_non_food_production_test)
+  expect_equal(human_non_food_production(human_population, coef_table, multiplier = 1000), human_non_food_production_test_01)
+
+
+  
   ### human food =======================================
   load(system.file("testdata", "human_food_test.rda", package="nani"))
   human_food_test[is.na(human_food_test)] <- 0
@@ -318,6 +334,6 @@ test_that("nani", {
  
   
   
-
+  
   
 })

@@ -5,7 +5,7 @@
 \alias{coef_table}
 \title{Prices of 50,000 round cut diamonds.}
 \format{
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 824 rows and 5 columns.
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 825 rows and 5 columns.
 }
 \usage{
 coef_table

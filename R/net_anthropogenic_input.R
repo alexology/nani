@@ -26,7 +26,7 @@ net_anthropogenic_input <- function(..., element = "nitrogen"){
   if(identical(element, "phosphorus")){
     input_needed <- c("fertilizers", "depositions", "crop_production", "human_food",
                       "human_food_consumption", "human_excretion", "animal_feed", "animal_feed_consumption",
-                      "animal_production", "animal_excretion_gross")
+                      "animal_production", "animal_excretion_gross", "human_non_food_production")
   }
   
 
